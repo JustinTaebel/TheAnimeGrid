@@ -4,6 +4,7 @@ const passport = require('passport')
 const LocalStrategy = require('passport-local')
 const bcrypt = require('bcrypt')
 const notAuth = require('./notAuth')
+const flash = require('express-flash')
 
 const users = require('../models/users')
 
@@ -11,7 +12,7 @@ passport.use(new LocalStrategy(async function verify(username, password, cb) {
     //finds user in database
     const user = await users.findOne({username: username})
     if (!user) {
-        return cb(null, false, {message: 'Incorrect username or password'})
+        return cb(null, false, {message: 'Incorrect Username or Password.'})
     }
 
     //checks password of user
@@ -23,12 +24,13 @@ passport.use(new LocalStrategy(async function verify(username, password, cb) {
 }))
 
 router.get('/login', notAuth, (req, res) => {
-    res.render('login', {message: ''})
+    res.render('login')
 })
 
 router.post('/login', passport.authenticate('local', {
     successRedirect: '/',
-    failureRedirect: '/login'
+    failureRedirect: '/login',
+    failureFlash: true
     })    
 )
 

@@ -4,8 +4,10 @@ if (process.env.NODE_ENV !== 'production') {
 
 const express = require('express')
 const session = require('express-session')
-const app = express()
+const flash = require('express-flash')
 const expressLayouts = require('express-ejs-layouts')
+const app = express()
+
 const passport = require('passport')
 
 
@@ -16,12 +18,12 @@ const aboutRouter = require('./routes/about')
 const developRouter = require('./routes/develop')
 const articleRouter = require('./routes/article')
 const loginRouter = require('./routes/login')
-const logoutRouter = require('./routes/logout')
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
 app.set('layout', 'layouts/layout')
 app.use(express.urlencoded({extended: false}))
+app.use(flash())
 app.use(session({
     secret:process.env.SECRET_SESSION,
     resave: false,

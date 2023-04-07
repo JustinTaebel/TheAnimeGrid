@@ -13,7 +13,9 @@
                     <input type="password" name="password" required>
                     <i>Password</i>
                     <b>
-                        <%- message %>
+                        <% if (messages.error) { %>
+                            <%= messages.error %>
+                        <% } %>
                     </b>
                 </div>
                 
