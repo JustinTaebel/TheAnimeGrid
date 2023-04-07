@@ -6,6 +6,7 @@ const express = require('express')
 const session = require('express-session')
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
+const passport = require('passport')
 
 
 app.listen(process.env.PORT || 3000)
@@ -15,6 +16,7 @@ const aboutRouter = require('./routes/about')
 const developRouter = require('./routes/develop')
 const articleRouter = require('./routes/article')
 const loginRouter = require('./routes/login')
+const logoutRouter = require('./routes/logout')
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
@@ -26,13 +28,14 @@ app.use(session({
     saveUninitialized: false
 }))
 app.use(expressLayouts)
+app.use(passport.authenticate('session'));
 
 app.use(express.static('public'));
 app.use('/', indexRouter)
 app.use('/about', aboutRouter)
 app.use('/coming-soon', developRouter)
 app.use('/post', articleRouter)
-app.use('/login', loginRouter)
+app.use('/', loginRouter)
 
 const mongoose = require('mongoose')
 mongoose.connect(process.env.DATABASE_URL, {

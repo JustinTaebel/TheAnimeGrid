@@ -1,7 +1,9 @@
 const express = require('express')
 const router = express.Router()
+const passport = require('passport')
+const isAuth = require('./authUser')
 
-router.get('/new', (req, res) => {
+router.get('/new', isAuth, (req, res) => {
     res.render('post/new')
 })
 
