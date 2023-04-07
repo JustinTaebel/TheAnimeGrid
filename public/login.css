@@ -1,0 +1,95 @@
+section{
+    padding: 8rem 2rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .signin{
+    background: #111;
+    width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    border-radius: 4px;
+    box-shadow: 0px 5px 35px rgb(0, 125, 255);
+}
+
+section .signin .login-box{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.login-box h2{
+    font-size: 2rem;
+    color: rgb(0, 125, 255);
+    text-transform: uppercase;
+}
+
+.login-box form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+form .inputBox{
+    position: relative;
+    width: 100%;
+}
+
+form .inputBox input{
+    position: relative;
+    width: 100%;
+    background-color: #333;
+    border: none;
+    outline: none;
+    padding: 25px 10px 7.5px;
+    color: white;
+    font-weight: 300;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+form .inputBox i{
+    position: absolute;
+    left: 0;
+    padding: 15px 10px;
+    color: #aaa;
+    transition: .5s;
+    pointer-events: none;
+}
+
+.inputBox input:focus ~ i,
+.inputBox input:valid ~ i{
+    transform: translateY(-7.5px);
+    font-size: 0.8rem;
+    color: white;
+}
+
+form .inputBox input[type="submit"]{
+    margin-top: 1rem;
+    padding: 10px;
+    background: rgb(0, 125, 255);
+    color: white;
+    font-size: 1.25rem;
+    letter-spacing: .1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+form .inputBox input[type="submit"]:hover{
+    background: blue;
+}
+
+form .inputBox b{
+    color: red;
+    font-size: 1rem;
+}

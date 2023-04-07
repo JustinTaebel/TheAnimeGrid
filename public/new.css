@@ -1,0 +1,65 @@
+.hero {
+    margin-bottom: 0rem;
+}
+
+.genre{
+    display: flex;
+    flex-direction: column;
+}
+
+.tags{
+    margin-right: 1rem;
+    background-color: var(--genre);
+    width: 5rem;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+#title{
+    font-size: 300%;
+}
+
+#description{
+    text-align: center;
+    font-size: 1.25rem;
+    width: 100%;
+    background: rgb(222, 222, 222);
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-group label{
+    font-size: large;
+}
+
+.form-group input{
+    background: rgb(222, 222, 222);
+}
+
+.form-group p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: gray;
+}
+
+.form-group #markdown{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 25rem;
+    background: rgb(222, 222, 222);
+}
+
+.btn{
+    color: black;
+    text-decoration: none;
+    background: var(--color);
+    padding: .5rem 1rem;
+    border-color: black;
+    border-width: 3px;
+    cursor: pointer;
+}

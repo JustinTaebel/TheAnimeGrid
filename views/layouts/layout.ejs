@@ -3,39 +3,59 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="x-icon" href="icon.png">
-
+    <link rel="shortcut icon" type="x-icon" href="img/icon.png">
     <title>The Anime Grid!</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="/header.css">
+    
 </head>
 <body>
     <div class="nav">
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fa fa-bars"></i>
-        </label>
-        <ul>
-            <a class="navbutton" href="anime.html" style="--clr:#f6fe00"><span>Anime</span></a>
-            <a class="navbutton" href="#" style="--clr:#cc0000"><span>Manga</span></a>
-            <a class="navbutton" href="#" style="--clr:#a822a8"><span>Reviews</span></a>
-        </ul>
-        <a href="index.html" style="text-decoration: none;">
-            <h1 class="glitch" style='color:white; text-align:center;'>The Anime Grid!</h1>
-        </a>
-        <ul>
-            <a class="navbutton" href="#" style="--clr:#00fe08"><span>Guides</span></a>
-            <a class="navbutton" href="#" style="--clr:#1e9bff"><span>Funko</span></a>
-            <a class="navbutton" href="about.html" style="--clr:#ffa500"><span>About</span></a>
-        </ul>
-        
+        <div class="nav-links">
+            <a href="/" class="small-nav-btn"><span>The Anime Grid!</span></a>
+            <a class = "brand" href="/" style="text-decoration: none;">
+                <h1 class="glitch" style='color:white; text-align:center;'>The Anime Grid!</h1>
+            </a>
+            <ul>
+                <a class="navbutton" href="/coming-soon" style="--clr:#f6fe00"><span>Anime</span></a>
+                <a class="navbutton" href="/coming-soon" style="--clr:#cc0000"><span>Manga</span></a>
+                <a class="navbutton" href="/coming-soon" style="--clr:#a822a8"><span>Reviews</span></a>
+            </ul>
+            <ul>
+                <a class="navbutton" href="/coming-soon" style="--clr:#00fe08"><span>Guides</span></a>
+                <a class="navbutton" href="/coming-soon" style="--clr:#1e9bff"><span>Funko</span></a>
+                <a class="navbutton" href="/about" style="--clr:#ffa500"><span>About</span></a>
+            </ul>
+        </div>
     </div>
 
-    <%- body %>
+    <div>
+        <%- body %>
+    </div>
+
+    <div class="footer">
+        <h3>The Anime Grid!</h3>
+        <p> The Anime Grid is your go-to source for all things anime, manga, games, and Funko Pops.<br>
+            Our team of passionate writers brings you the latest news, reviews, theories, quizzes, and more on your favorite anime series and manga titles.<br>
+            Join our community of fellow fans and stay up to date on all the latest happenings in the world of anime and manga!</p>
+        <ul class="socials">
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-instagram"></a></li>
+            <li><a href="#" class="fa fa-youtube-play"></a></li>
+            <li><a href="#" class="fa fa-linkedin"></a></li>
+        </ul>
+        <a class="login" href="/login">Login</a>
+    </div>
+    <div class="copyright">
+        <div class="fa fa-copyright">Copyright 2023 . Developed by Justin Taebel</div>
+    </div>
+
+
 
 </body>
 </html>

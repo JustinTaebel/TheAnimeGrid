@@ -11,30 +11,41 @@ body {
 }
 
 .nav{
+    z-index: -4;
+    background-color: #111;
     grid-area: nav;
+    align-items: center;
+}
+
+#check{
+    display: none;
+}
+
+.nav-links{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-
 }
 
-.nav ul{
+.nav-links ul{
     display: inline-block;
     line-height: 80px;
 }
 
-.nav label i{
-    display: none;
-}
-
-.nav input{
-    display: none;
-}
-
-.checkbtn{
+.brand{
     font-size: 30px;
     color: white;
+    text-decoration: none;
+    z-index: 0;
+}
+
+.small-nav-btn{
+    display: none;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .navbutton{
@@ -80,13 +91,61 @@ body {
 .glitch:hover::before{
     animation: glitch 0.3s linear infinite;
     color: blue;
-    z-index: -2;
+    z-index: -1;
 }
 .glitch:hover::after{
     animation: glitch 0.3s linear infinite reverse;
     color: palevioletred;
-    z-index: -1;
+    z-index: -2;
 }
+
+.footer{
+    font-size: 120%;
+    background: #0a0a0a;
+    text-align: center;
+    padding: 3rem;
+}
+
+.footer p{
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 75%;
+}
+
+.footer .socials{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    list-style: none;
+    margin: 1rem 0 1rem 0;
+}
+
+.footer .socials li{
+    margin: 0 1rem;
+}
+
+.footer .socials a{
+    text-decoration: none;
+    color: rgb(0, 125, 255);
+    transition: .5s;
+}
+
+.footer .socials a:hover{
+    color: blue;
+}
+
+.footer .login{
+    font-size: 1rem;
+    color: gray;
+}
+
+.copyright{
+    padding: 1rem;
+    background: black;
+    text-align: center;
+}
+
 @keyframes glitch{
     0%{
         top: 0;
@@ -112,4 +171,65 @@ body {
         top: 0;
         left: 0;
     }
+}
+
+@media only screen and (max-width: 1420px){
+    .glitch{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 1280px){
+    .glitch{
+        font-size: 20px;
+    }
+    .nav-links a{
+        padding: .1rem .25rem;
+        text-align: center;
+    }
+
+    .navbutton{
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (max-width: 794px){
+    .nav-links{
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav-links ul{
+        text-align: center;
+        margin: 0px;
+        background: #222;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .small-nav-btn{
+        font-size: 30px;
+        display: block;
+    }
+
+    .brand{
+        display: none;
+    }
+
+    .nav{
+        align-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links a{
+        padding: 0rem .5rem;
+        text-align: center;
+    }
+
+    .navbutton{
+        font-size: 15px;
+    }
+
 }
