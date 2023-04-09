@@ -174,9 +174,7 @@ body {
 }
 
 @media only screen and (max-width: 1420px){
-    .glitch{
-        font-size: 30px;
-    }
+    
 }
 
 @media only screen and (max-width: 1280px){
@@ -208,13 +206,8 @@ body {
         width: 100%;
     }
 
-    .small-nav-btn{
-        font-size: 30px;
-        display: block;
-    }
-
     .brand{
-        display: none;
+        margin: 1rem;
     }
 
     .nav{

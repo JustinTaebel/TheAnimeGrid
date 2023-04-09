@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const slugify = require('slugify')
 
 const postSchema = new mongoose.Schema({
     title: {
@@ -7,19 +8,22 @@ const postSchema = new mongoose.Schema({
     },
     category: {
         type: String,
-        enum: ['Anime', 'Manga', 'Guide', 'Review', 'Funko'],
+        enum: ['Anime', 'Manga', 'Game', 'Funko'],
         required: true
     },
     genre: {
         type: String,
-        enum: ['Slice of Life', 'Sports', 'Romance', 'Action', 'Drama', 'Thriller', 'Fantasy'],
     },
     description: {
         type: String,
+        required: true
+    },
+    author: {
+        type: String
     },
     createdAt: {
         type: Date,
-        default: Date.now
+        default: new Date().toLocaleDateString()
     },
     image: {
         type: String,
@@ -32,9 +36,20 @@ const postSchema = new mongoose.Schema({
     markdown: {
         type: String,
         required: true
-    }
-
-    
+    },
+    slug: {
+        type: String,
+        required: true,
+        unique: true
+    }    
 })
 
-module.exports = mongoose.model('Category', categorySchema)
+postSchema.pre('validate', function(next) {
+    if (this.title) {
+        this.slug = slugify(this.title, {lower: true, strict: true})
+    }
+
+    next()
+})
+
+module.exports = mongoose.model('Post', postSchema)

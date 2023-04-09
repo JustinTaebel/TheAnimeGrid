@@ -8,32 +8,32 @@
         <div class="hero">
             
             <div class="genres">
-                <label for="main-category">Main:</label>
-                <input required class="tags" type="main-category" name="main-category" id="main-category" style="--genre:yellow">
+                <label for="category">Main:</label>
+                <input required class="tags" value="<%= post.category %>" type="category" name="category" id="category" style="--genre:yellow">
 
                 <label for="sub-category" >Genre: </label>
-                <input class="tags" type="sub-category" name="sub-category" id="sub-category" style="--genre:red">
+                <input class="tags" value="<%= post.genre %>" type="genre" name="genre" id="genre" style="--genre:red">
             </div>
             <div class="form-group">
                 <label for="title">Title:<p>Write a Title for your Post. Keep it around 6-8 Words</p></label>
-                <input required type="title" name="title" id="title">
+                <input required value="<%= post.title %>" type="title" name="title" id="title">
             </div>
             <div class="info">
                 <div class="author">
                     <img src="/img/" alt="";>
-                    <p>Author: <a href="#">Name </a></p>
+                    <p>Author: <a href="#"><%= post.author %></a></p>
                 </div>
-                <p>Date: -/-/----</p>
+                <p>Date: <%= post.createdAt.toLocaleDateString() %></p>
             </div>
             <div class="form-group">
                 <label for="description">Description:<p>Write a Short Description about your Post. Keep it between 1-2 Sentences. (NOTE: Not required)</p></label>
-                <h2><textarea name="description" id="description"></textarea></h2>
+                <h2><textarea required name="description" id="description"><%= post.description %></textarea></h2>
             </div>
             <div class="img-box">
                 <img src="/img/">
                 <div class="form-group">
                     <label for="source">source:</label>
-                    <input required type="source" name="source" id="source">
+                    <input required value="#" type="source" name="source" id="source">
                 </div>
             </div>
         </div>
@@ -41,19 +41,13 @@
         <div class="markdown">
             <div class="form-group">
                 <label for="markdown">Markdown:<p>Write your post here. You can make it as long or as short as you want. Look at other blog posts on other websites to get the idea of how to write a post.</p></label>
-                <textarea required name="markdown" id="markdown"></textarea>
+                <textarea required name="markdown" id="markdown"><%= post.markdown %></textarea>
             </div>
         </div>
-      </form>
 
-        <div class="share">
-            <span class="fa fa-facebook"></span>
-            <span class="fa fa-twitter"></span>
-            <span class="fa fa-instagram"></span>
-        </div>
-    
         <a href="/" class="btn" style="--color:lightgray">Cancel</a>
-        <button type="submit" class="btn" style="--color:yellow">Post</button> 
+        <button type="submit" class="btn" style="--color:yellow">Post</button>
+      </form>
 
     </section>
 

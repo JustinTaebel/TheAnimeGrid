@@ -16,7 +16,7 @@
 }
 
 .hero{
-    max-width: 50rem;
+    max-width: 52rem;
     margin-bottom: 2rem;
 }
 
@@ -44,6 +44,7 @@
 }
 
 .hero .img-box img{
+    border: solid lightgray;
     background: linear-gradient(90deg, rgb(0, 190, 255), greenyellow);
     width: 100%;
     height: auto;
@@ -159,9 +160,9 @@
     position: relative;
     width: auto;
     height: auto;
+    border: solid black;
     overflow: hidden;
     transition: 0.5s;
-    border-radius: 5%;
 }
 .box:hover{
     z-index: 1;
