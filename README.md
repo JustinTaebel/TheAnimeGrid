@@ -37,7 +37,7 @@ After posting, it will redirect to the post page. Going back to the home page al
 
 <h1>Post</h1>
 Image is shown and has a source underneath that when clicks will redirect to the link where the image was found.
-![Post]((https://github.com/JustinTaebel/TheAnimeGrid/blob/main/README/Post1.PNG))
+![Post](https://github.com/JustinTaebel/TheAnimeGrid/blob/main/README/Post1.PNG)
 Post content shows the Markdown design (Heading is in a bigger font).
 ![Post2]([https://github.com/JustinTaebel/TheAnimeGrid/assets/83143731/1636b1ac-617b-4153-95bb-0cc6c110954b](https://github.com/JustinTaebel/TheAnimeGrid/blob/main/README/Home1.PNG))
 
