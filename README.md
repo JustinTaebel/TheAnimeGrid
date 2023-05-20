@@ -6,7 +6,7 @@ Created by me, Justin, in Visual Studio Code using Node.JS, EJS, Passport, Mongo
 The Home page of the website shows numerous random posts from the database with the most recent post being in the featured position (bottom right corner).<br>
 The pink square is a secret button for writers with an account to push that will direct them to a post upload page where they will be able to create a post within the website and after see it on the home page.
 <br>
-![Home1]([https://github.com/JustinTaebel/TheAnimeGrid/assets/83143731/41e39751-f02f-46ea-83c8-0ea25b2bf021](https://github.com/JustinTaebel/TheAnimeGrid/blob/main/README/Home1.PNG))<br>
+![Home1](/JustinTaebel/TheAnimeGrid/blob/main/README/Home1.PNG)<br>
 When hovering over a post icon, the picture will expand and bring up a short description for what the post is about.<br>
 ![HomeHover]([https://github.com/JustinTaebel/TheAnimeGrid/assets/83143731/89ddc370-1b4c-4e78-8e27-dee0d2d0941c](https://github.com/JustinTaebel/TheAnimeGrid/blob/main/README/HomeHover.PNG))<br>
 The second half of the home page shows the 5 most recent posts and 2 categories on the right hand side (News and Funkos). When posts are made, it has certain attributes assigned to it (date, categories, etc.), so it searches through the database and finds the 5 most recents, posts with the displayed category(News and Funkos) and displays them in their sections.<br>
