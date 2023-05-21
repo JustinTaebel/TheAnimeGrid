@@ -6,7 +6,7 @@ Created by me from scratch using npm, Node.JS, EJS, Passport, MongoDB database, 
 The Home page of the website shows numerous random posts from the database with the most recent post being in the featured position (bottom right corner)
 The pink square is a secret button for writers with an account to push that will direct them to a post upload page where they will be able to create a post within the website and after see it on the home page.
 <picture>
-  <source <img alt="Home Page" src="https://github.com/JustinTaebel/TheAnimeGrid/assets/83143731/e680be05-b8db-4e26-8907-06fe6560b620">
+  <img alt="Home Page" src="https://github.com/JustinTaebel/TheAnimeGrid/assets/83143731/e680be05-b8db-4e26-8907-06fe6560b620">
 </picture>
 When hovering over a post icon, the picture will expand and bring up a short description for what the post is about.
 ![HomeHover](https://github.com/JustinTaebel/TheAnimeGrid/assets/83143731/89ddc370-1b4c-4e78-8e27-dee0d2d0941c)
