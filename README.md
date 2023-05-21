@@ -1,7 +1,6 @@
 The Anime Grid is a blog about anime, manga, and other topics in the same genre.
 
-Created by me, Justin, in Visual Studio Code using Node.JS, EJS, Passport, MongoDB, and CSS
-Created by me, Justin, in Visual Studio Code using Node.JS, EJS, Passport, MongoDB, and HTML/CSS
+Created by me from scratch using npm, Node.JS, EJS, Passport, MongoDB database, and HTML/CSS.
 
 <h1>Home Page</h1>
 The Home page of the website shows numerous random posts from the database with the most recent post being in the featured position (bottom right corner)
